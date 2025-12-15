@@ -6,7 +6,32 @@
     cursor: pointer;
     margin-top: 80px;
 }
+/**************************** language toggle ****************************/
+.hero-lang-toggle {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
+}
 
+.lang-btn {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.lang-btn--active {
+  background: #f6a823;
+  color: #05060a;
+  border-color: #f6a823;
+}
+
+
+/**************************** TITLES ****************************/
 /* white title */
 .white-txt {
     color: white;
@@ -14,7 +39,7 @@
     0 0 8px rgba(255, 255, 255, 0.6),
     0 0 16px rgba(255, 255, 255, 0.4);
     font-size: 4rem;
-    font-family: "Montserrat Alternates", sans-serif;
+    /* font-family: "Montserrat Alternates", sans-serif; */
 }
 
 /* orange title */
@@ -25,7 +50,7 @@
     0 0 20px rgba(246, 168, 35, 0.5),
     0 0 30px rgba(246, 168, 35, 0.3);
     font-size: 4rem;
-    font-family: "Montserrat Alternates", sans-serif;
+    /* font-family: "Montserrat Alternates", sans-serif; */
 }
 
 /* subtitle */
@@ -56,7 +81,7 @@
   text-transform: uppercase;  
 }
 
-/**************** live dot ****************/
+/**************************** live dot /****************************/
 .hero-live-dot {
   width: 8px;
   height: 8px;

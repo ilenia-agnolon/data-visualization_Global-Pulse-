@@ -1,546 +1,726 @@
-export const sections = [
+// src/data/counters.js
+
+export const dataCategories = [
   // 🧬 HUMAN HYPER PULSE
   {
     id: "human_hyper_pulse",
-    title: { it: "Pulsazione Umana", en: "Human Hyper Pulse", emoji: "🧬" },
-    graphStyle: "pulse_line",
+    emoji: "🧬",
+    title: {
+      it: "Pulsazione Umana",
+      en: "Human Hyper Pulse",
+    },
+    subtitle: {
+      it: "Ritmi e processi del corpo umano",
+      en: "Rhythms and processes of the human body",
+    },
+    info: {
+      source: "World Health Organization (WHO) + fisiologia umana (stima)",
+      url: "https://www.who.int/",
+      note_it:
+        "Valori indicativi/stimati da medie fisiologiche e popolazione globale; non sono misure in tempo reale.",
+      note_en:
+        "Indicative/estimated values from physiological averages and global population; not real-time measurements.",
+    },
+    graphStyle: "data_rain",
     items: [
       {
         id: "heartbeats",
-        title: { it: "❤️ Battiti cardiaci globali", en: "❤️ Global heartbeats" },
+        emoji: "❤️",
+        title: { it: "Battiti cardiaci globali", en: "Global heartbeats" },
         description: {
-          it: "Cuori che battono in questo istante.",
-          en: "Hearts beating in this instant."
+          it: "Cuori che battono nel mondo in questo istante.",
+          en: "Hearts beating worldwide in this moment.",
         },
         ratePerSecond: 8300000000,
-        unit: { it: "battiti/sec", en: "beats/sec" }
+        unit: { it: "battiti/sec", en: "beats/sec" },
       },
       {
         id: "breaths",
-        title: { it: "😮‍💨 Respiri globali", en: "😮‍💨 Global breaths" },
+        emoji: "😮‍💨",
+        title: { it: "Respiri globali", en: "Global breaths" },
         description: {
-          it: "Respiri fatti dall'umanità ogni secondo.",
-          en: "Breaths taken by humanity every second."
+          it: "Respiri effettuati dall'umanità ogni secondo.",
+          en: "Breaths taken by humanity each second.",
         },
         ratePerSecond: 230000000,
-        unit: { it: "respiri/sec", en: "breaths/sec" }
+        unit: { it: "respiri/sec", en: "breaths/sec" },
       },
       {
         id: "cells_regenerated",
-        title: { it: "🔬 Cellule rigenerate", en: "🔬 Cells regenerated" },
+        emoji: "🧫",
+        title: { it: "Cellule rigenerate", en: "Cells regenerated" },
         description: {
-          it: "Cellule che rinascono nel corpo umano.",
-          en: "Cells regenerated in the human body."
+          it: "Cellule che si rigenerano nel corpo umano.",
+          en: "Cells regenerated in the human body.",
         },
         ratePerSecond: 25000000,
-        unit: { it: "cellule/sec", en: "cells/sec" }
+        unit: { it: "cellule/sec", en: "cells/sec" },
       },
       {
-        id: "neuron_firings",
-        title: { it: "⚡ Impulsi neurali", en: "⚡ Neural impulses" },
+        id: "neural_firings",
+        emoji: "⚡",
+        title: { it: "Impulsi neurali", en: "Neural impulses" },
         description: {
-          it: "Attività elettrica del cervello umano.",
-          en: "Electrical activity firing in the brain."
+          it: "Attività elettrica nel cervello umano.",
+          en: "Electrical activity firing in the brain.",
         },
         ratePerSecond: 100000000000,
-        unit: { it: "impulsi/sec", en: "impulses/sec" }
+        unit: { it: "impulsi/sec", en: "impulses/sec" },
       },
       {
         id: "red_blood_cells",
-        title: { it: "🩸 Globuli rossi prodotti", en: "🩸 Red blood cells produced" },
+        emoji: "🩸",
+        title: {
+          it: "Globuli rossi prodotti",
+          en: "Red blood cells produced",
+        },
         description: {
           it: "Globuli rossi creati dal midollo osseo.",
-          en: "Red blood cells created by bone marrow."
+          en: "Red blood cells created by bone marrow.",
         },
         ratePerSecond: 240000000,
-        unit: { it: "cellule/sec", en: "cells/sec" }
+        unit: { it: "cellule/sec", en: "cells/sec" },
       },
       {
-        id: "global_calories_burned",
-        title: { it: "🔥 Calorie bruciate", en: "🔥 Calories burned" },
+        id: "calories_burned",
+        emoji: "🔥",
+        title: { it: "Calorie bruciate", en: "Calories burned" },
         description: {
           it: "Calorie consumate dall'umanità.",
-          en: "Calories burned by humanity."
+          en: "Calories burned by humanity.",
         },
         ratePerSecond: 3000000,
-        unit: { it: "kcal/sec", en: "kcal/sec" }
+        unit: { it: "kcal/sec", en: "kcal/sec" },
       },
       {
         id: "chemical_reactions",
-        title: { it: "🧪 Reazioni chimiche", en: "🧪 Chemical reactions" },
+        emoji: "🧪",
+        title: { it: "Reazioni chimiche", en: "Chemical reactions" },
         description: {
           it: "Reazioni all'interno del corpo umano.",
-          en: "Reactions occurring inside the human body."
+          en: "Chemical reactions inside the human body.",
         },
         ratePerSecond: 3600000000000000,
-        unit: { it: "reazioni/sec", en: "reactions/sec" }
+        unit: { it: "reazioni/sec", en: "reactions/sec" },
       },
       {
         id: "synapses",
-        title: { it: "🧠 Sinapsi attivate", en: "🧠 Synapses fired" },
+        emoji: "🧠",
+        title: { it: "Sinapsi attivate", en: "Synapses fired" },
         description: {
           it: "Connessioni cerebrali attive.",
-          en: "Brain synapses firing."
+          en: "Brain synapses firing.",
         },
         ratePerSecond: 100000000000000,
-        unit: { it: "sinapsi/sec", en: "synapses/sec" }
+        unit: { it: "sinapsi/sec", en: "synapses/sec" },
       },
       {
         id: "falling_asleep",
-        title: { it: "😴 Persone che si addormentano", en: "😴 People falling asleep" },
+        emoji: "😴",
+        title: {
+          it: "Persone che si addormentano",
+          en: "People falling asleep",
+        },
         description: {
-          it: "Umanità che entra nel sonno.",
-          en: "People drifting into sleep."
+          it: "Persone che entrano nel sonno in questo momento.",
+          en: "People drifting into sleep right now.",
         },
         ratePerSecond: 90,
-        unit: { it: "persone/sec", en: "people/sec" }
+        unit: { it: "persone/sec", en: "people/sec" },
       },
       {
         id: "smiles",
-        title: { it: "😊 Sorrisi globali", en: "😊 Global smiles" },
+        emoji: "😊",
+        title: { it: "Sorrisi globali", en: "Global smiles" },
         description: {
-          it: "Sorrisi condivisi nel mondo.",
-          en: "Smiles shared across the world."
+          it: "Sorrisi condivisi nel mondo ogni secondo.",
+          en: "Smiles shared across the world each second.",
         },
         ratePerSecond: 8000000,
-        unit: { it: "sorrisi/sec", en: "smiles/sec" }
-      }
-    ]
+        unit: { it: "sorrisi/sec", en: "smiles/sec" },
+      },
+    ],
   },
 
   // 🌍 PLANET TURBO FLOW
   {
     id: "planet_flow",
-    title: { it: "Flusso del Pianeta", en: "Planet Turbo Flow", emoji: "🌍" },
+    emoji: "🌍",
+    title: {
+      it: "Flusso del Pianeta",
+      en: "Planet Turbo Flow",
+    },
+    subtitle: {
+      it: "Fenomeni naturali e planetari",
+      en: "Natural and planetary phenomena",
+    },
+    info: {
+      source: "NASA Earth Observatory / NOAA / USGS (stima)",
+      url: "https://earthobservatory.nasa.gov/",
+      note_it:
+        "Valori indicativi/stimati basati su ordini di grandezza e medie geofisiche; non sono sensori live globali.",
+      note_en:
+        "Indicative/estimated values based on orders of magnitude and geophysical averages; not global live sensing.",
+    },
     graphStyle: "data_rain",
     items: [
       {
         id: "rain_drops",
-        title: { it: "🌧 Gocce di pioggia", en: "🌧 Rain drops" },
+        emoji: "🌧",
+        title: { it: "Gocce di pioggia", en: "Rain drops" },
         description: {
           it: "Gocce che cadono sulla Terra.",
-          en: "Rain drops falling worldwide."
+          en: "Rain drops falling on Earth.",
         },
         ratePerSecond: 160000000000000000,
-        unit: { it: "gocce/sec", en: "drops/sec" }
+        unit: { it: "gocce/sec", en: "drops/sec" },
       },
       {
         id: "evaporation",
-        title: { it: "🌊 Evaporazione globale", en: "🌊 Global evaporation" },
+        emoji: "🌊",
+        title: { it: "Evaporazione globale", en: "Global evaporation" },
         description: {
           it: "Acqua che ritorna in atmosfera.",
-          en: "Water evaporating into the atmosphere."
+          en: "Water evaporating into the atmosphere.",
         },
         ratePerSecond: 580000000000,
-        unit: { it: "litri/sec", en: "liters/sec" }
+        unit: { it: "litri/sec", en: "liters/sec" },
       },
       {
         id: "lightning",
-        title: { it: "⚡ Fulmini globali", en: "⚡ Global lightning" },
+        emoji: "⚡",
+        title: { it: "Fulmini globali", en: "Global lightning" },
         description: {
           it: "Scariche elettriche sulla Terra.",
-          en: "Lightning strikes around the planet."
+          en: "Lightning strikes around the planet.",
         },
         ratePerSecond: 44,
-        unit: { it: "eventi/sec", en: "events/sec" }
+        unit: { it: "eventi/sec", en: "events/sec" },
       },
       {
         id: "micro_quakes",
-        title: { it: "🌪 Micro-terremoti", en: "🌪 Micro-earthquakes" },
+        emoji: "🌪",
+        title: { it: "Micro-terremoti", en: "Micro-earthquakes" },
         description: {
           it: "Piccole vibrazioni della crosta terrestre.",
-          en: "Small seismic events worldwide."
+          en: "Small seismic events worldwide.",
         },
         ratePerSecond: 2,
-        unit: { it: "eventi/sec", en: "events/sec" }
+        unit: { it: "eventi/sec", en: "events/sec" },
       },
       {
-        id: "plant_growth",
-        title: { it: "🌱 Cellule vegetali in crescita", en: "🌱 Growing plant cells" },
+        id: "plant_cells_growth",
+        emoji: "🌱",
+        title: {
+          it: "Cellule vegetali in crescita",
+          en: "Growing plant cells",
+        },
         description: {
           it: "Crescita delle piante nel mondo.",
-          en: "Plant cells growing globally."
+          en: "Plant cells growing globally.",
         },
         ratePerSecond: 90000000000,
-        unit: { it: "cellule/sec", en: "cells/sec" }
+        unit: { it: "cellule/sec", en: "cells/sec" },
       },
       {
-        id: "water_molecules",
-        title: { it: "☁️ Molecole d'acqua nell'aria", en: "☁️ Water molecules rising" },
+        id: "water_molecules_air",
+        emoji: "☁️",
+        title: {
+          it: "Molecole d'acqua nell'aria",
+          en: "Water molecules rising",
+        },
         description: {
           it: "Molecole che entrano nell'atmosfera.",
-          en: "Water molecules entering the air."
+          en: "Water molecules entering the air.",
         },
         ratePerSecond: 1000000000000000000000,
-        unit: { it: "molecole/sec", en: "molecules/sec" }
+        unit: { it: "molecole/sec", en: "molecules/sec" },
       },
       {
-        id: "solar_energy",
-        title: { it: "🔆 Energia solare assorbita", en: "🔆 Solar energy absorbed" },
+        id: "solar_energy_absorbed",
+        emoji: "🔆",
+        title: {
+          it: "Energia solare assorbita",
+          en: "Solar energy absorbed",
+        },
         description: {
           it: "Energia che colpisce la superficie della Terra.",
-          en: "Solar energy hitting Earth's surface."
+          en: "Solar energy hitting Earth's surface.",
         },
         ratePerSecond: 174000000000000000000,
-        unit: { it: "joule/sec", en: "joules/sec" }
+        unit: { it: "joule/sec", en: "joules/sec" },
       },
       {
         id: "grass_growth",
-        title: { it: "🌾 Erba che cresce", en: "🌾 Grass growing" },
+        emoji: "🌾",
+        title: { it: "Erba che cresce", en: "Grass growing" },
         description: {
           it: "Crescita delle superfici erbose.",
-          en: "Grass expanding worldwide."
+          en: "Grass expanding worldwide.",
         },
         ratePerSecond: 13000000000,
-        unit: { it: "cellule/sec", en: "cells/sec" }
+        unit: { it: "cellule/sec", en: "cells/sec" },
       },
       {
-        id: "bacteria",
-        title: { it: "🦠 Batteri che si riproducono", en: "🦠 Reproducing bacteria" },
+        id: "bacteria_reproduction",
+        emoji: "🦠",
+        title: {
+          it: "Batteri che si riproducono",
+          en: "Reproducing bacteria",
+        },
         description: {
           it: "Crescita batterica negli ecosistemi.",
-          en: "Bacterial reproduction in ecosystems."
+          en: "Bacterial reproduction in ecosystems.",
         },
         ratePerSecond: 400000000000000,
-        unit: { it: "divisioni/sec", en: "divisions/sec" }
+        unit: { it: "divisioni/sec", en: "divisions/sec" },
       },
       {
         id: "air_currents",
-        title: { it: "💨 Correnti d'aria globali", en: "💨 Global air currents" },
+        emoji: "💨",
+        title: {
+          it: "Correnti d'aria globali",
+          en: "Global air currents",
+        },
         description: {
           it: "Movimento dell'atmosfera terrestre.",
-          en: "Movement of Earth's atmosphere."
+          en: "Movement of Earth's atmosphere.",
         },
         ratePerSecond: 100000000000000000,
-        unit: { it: "unità/sec", en: "units/sec" }
-      }
-    ]
+        unit: { it: "unità/sec", en: "units/sec" },
+      },
+    ],
   },
 
   // 🌌 COSMIC SURGE
   {
     id: "cosmic_surge",
-    title: { it: "Ondata Cosmica", en: "Cosmic Surge", emoji: "🌌" },
-    graphStyle: "orbital",
+    emoji: "🌌",
+    title: {
+      it: "Ondata Cosmica",
+      en: "Cosmic Surge",
+    },
+    subtitle: {
+      it: "Fenomeni astrofisici e particelle invisibili",
+      en: "Astrophysical phenomena and invisible particles",
+    },
+    info: {
+      source: "NASA / ESA / fisica delle particelle (stima)",
+      url: "https://science.nasa.gov/",
+      note_it:
+        "Valori indicativi/stimati da grandezze astrofisiche tipiche (raggi cosmici, fotoni, neutrini); non sono conteggi live.",
+      note_en:
+        "Indicative/estimated values from typical astrophysical magnitudes (cosmic rays, photons, neutrinos); not live counts.",
+    },
+    graphStyle: "data_rain",
     items: [
       {
         id: "cosmic_rays",
-        title: { it: "✨ Raggi cosmici", en: "✨ Cosmic rays" },
+        emoji: "✨",
+        title: { it: "Raggi cosmici", en: "Cosmic rays" },
         description: {
           it: "Particelle ad alta energia che colpiscono la Terra.",
-          en: "High‑energy particles striking Earth."
+          en: "High-energy particles striking Earth.",
         },
         ratePerSecond: 1000000000000,
-        unit: { it: "particelle/sec", en: "particles/sec" }
+        unit: { it: "particelle/sec", en: "particles/sec" },
       },
       {
         id: "solar_photons",
-        title: { it: "☀️ Fotoni solari", en: "☀️ Solar photons" },
+        emoji: "☀️",
+        title: { it: "Fotoni solari", en: "Solar photons" },
         description: {
           it: "Luce del Sole che arriva sulla Terra.",
-          en: "Sunlight photons arriving at Earth."
+          en: "Sunlight photons arriving at Earth.",
         },
         ratePerSecond: 2000000000000000000,
-        unit: { it: "fotoni/sec", en: "photons/sec" }
+        unit: { it: "fotoni/sec", en: "photons/sec" },
       },
       {
         id: "meteors",
-        title: { it: "🌠 Meteore atmosferiche", en: "🌠 Atmospheric meteors" },
+        emoji: "🌠",
+        title: { it: "Meteore atmosferiche", en: "Atmospheric meteors" },
         description: {
           it: "Meteoroidi che bruciano nell'atmosfera.",
-          en: "Meteors burning in the atmosphere."
+          en: "Meteors burning in the atmosphere.",
         },
         ratePerSecond: 16,
-        unit: { it: "eventi/sec", en: "events/sec" }
+        unit: { it: "eventi/sec", en: "events/sec" },
       },
       {
         id: "neutrinos",
-        title: { it: "💫 Neutrini", en: "💫 Neutrinos" },
+        emoji: "💫",
+        title: { it: "Neutrini", en: "Neutrinos" },
         description: {
           it: "Particelle che attraversano ogni corpo.",
-          en: "Particles passing through everything."
+          en: "Particles passing through everything.",
         },
         ratePerSecond: 6000000000000000000,
-        unit: { it: "particelle/sec", en: "particles/sec" }
+        unit: { it: "particelle/sec", en: "particles/sec" },
       },
       {
         id: "cosmic_expansion",
-        title: { it: "🌌 Espansione dell'universo", en: "🌌 Universe expansion" },
+        emoji: "🌀",
+        title: {
+          it: "Espansione dell'universo",
+          en: "Universe expansion",
+        },
         description: {
-          it: "Larghezza dello spazio che aumenta.",
-          en: "Space expanding continuously."
+          it: "Lo spazio stesso che si espande.",
+          en: "Space itself expanding.",
         },
         ratePerSecond: 70,
-        unit: { it: "km/sec/MPc", en: "km/sec/MPc" }
+        unit: { it: "km/sec/MPc", en: "km/sec/MPc" },
       },
       {
         id: "atoms_vibrating",
-        title: { it: "⚛️ Atomi che vibrano", en: "⚛️ Vibrating atoms" },
+        emoji: "⚛️",
+        title: { it: "Atomi che vibrano", en: "Vibrating atoms" },
         description: {
           it: "Movimento termico degli atomi.",
-          en: "Thermal vibration of atoms."
+          en: "Thermal vibration of atoms.",
         },
         ratePerSecond: 100000000000000000000000,
-        unit: { it: "vibrazioni/sec", en: "vibrations/sec" }
+        unit: { it: "vibrazioni/sec", en: "vibrations/sec" },
       },
       {
         id: "cmb_radiation",
-        title: { it: "🌑 Radiazione cosmica di fondo", en: "🌑 Cosmic background radiation" },
+        emoji: "🌑",
+        title: {
+          it: "Radiazione cosmica di fondo",
+          en: "Cosmic background radiation",
+        },
         description: {
-          it: "Echi del Big Bang.",
-          en: "Echo of the Big Bang."
+          it: "Eco del Big Bang che permea l'universo.",
+          en: "Echo of the Big Bang across the universe.",
         },
         ratePerSecond: 42000000000000000,
-        unit: { it: "fotoni/sec", en: "photons/sec" }
+        unit: { it: "fotoni/sec", en: "photons/sec" },
       },
       {
         id: "stellar_photons",
-        title: { it: "⭐ Fotoni stellari", en: "⭐ Stellar photons" },
+        emoji: "⭐",
+        title: { it: "Fotoni stellari", en: "Stellar photons" },
         description: {
           it: "Luce emessa dalle stelle vicine.",
-          en: "Light emitted from stars."
+          en: "Light emitted by nearby stars.",
         },
         ratePerSecond: 900000000000000000,
-        unit: { it: "fotoni/sec", en: "photons/sec" }
+        unit: { it: "fotoni/sec", en: "photons/sec" },
       },
       {
         id: "stellar_events",
-        title: { it: "🔭 Eventi stellari", en: "🔭 Stellar events" },
+        emoji: "🔭",
+        title: { it: "Eventi stellari", en: "Stellar events" },
         description: {
-          it: "Micro-esplosioni, flare, attività solare.",
-          en: "Micro-flares and stellar activity."
+          it: "Micro-flare, eruzioni e attività stellare.",
+          en: "Micro-flares and stellar activity.",
         },
         ratePerSecond: 1000000,
-        unit: { it: "eventi/sec", en: "events/sec" }
+        unit: { it: "eventi/sec", en: "events/sec" },
       },
       {
         id: "interstellar_particles",
-        title: { it: "☄️ Particelle interstellari", en: "☄️ Interstellar particles" },
+        emoji: "☄️",
+        title: {
+          it: "Particelle interstellari",
+          en: "Interstellar particles",
+        },
         description: {
           it: "Materiale che viaggia tra le stelle.",
-          en: "Material drifting between stars."
+          en: "Material drifting between stars.",
         },
         ratePerSecond: 800000000000,
-        unit: { it: "particelle/sec", en: "particles/sec" }
-      }
-    ]
+        unit: { it: "particelle/sec", en: "particles/sec" },
+      },
+    ],
   },
 
   // 💻 DIGITAL FIREHOSE
   {
     id: "digital_firehose",
-    title: { it: "Getto Digitale", en: "Digital Firehose", emoji: "💻" },
-    graphStyle: "system_ring",
+    emoji: "💻",
+    title: {
+      it: "Getto Digitale",
+      en: "Digital Firehose",
+    },
+    subtitle: {
+      it: "Flussi di dati e attività online",
+      en: "Data streams and online activity",
+    },
+    info: {
+      source: "ITU / report traffico Internet + stime piattaforme (stima)",
+      url: "https://www.itu.int/",
+      note_it:
+        "Valori indicativi/stimati da report su traffico e utilizzo servizi; non sono conteggi live globali.",
+      note_en:
+        "Indicative/estimated values from traffic and service-usage reports; not global live counts.",
+    },
+    graphStyle: "data_rain",
     items: [
       {
         id: "internet_packets",
-        title: { it: "🌐 Pacchetti internet", en: "🌐 Internet packets" },
+        emoji: "🌐",
+        title: { it: "Pacchetti internet", en: "Internet packets" },
         description: {
           it: "Dati che scorrono nella rete globale.",
-          en: "Data packets flowing worldwide."
+          en: "Data packets flowing worldwide.",
         },
         ratePerSecond: 300000000000,
-        unit: { it: "pacchetti/sec", en: "packets/sec" }
+        unit: { it: "pacchetti/sec", en: "packets/sec" },
       },
       {
-        id: "emails",
-        title: { it: "📧 Email inviate", en: "📧 Emails sent" },
+        id: "emails_sent",
+        emoji: "📧",
+        title: { it: "Email inviate", en: "Emails sent" },
         description: {
-          it: "Email spedite nel mondo.",
-          en: "Emails sent worldwide."
+          it: "Email spedite in tutto il mondo.",
+          en: "Emails sent worldwide.",
         },
         ratePerSecond: 3500000,
-        unit: { it: "email/sec", en: "emails/sec" }
+        unit: { it: "email/sec", en: "emails/sec" },
       },
       {
-        id: "scrolls",
-        title: { it: "📱 Scroll sui social", en: "📱 Social scrolls" },
+        id: "social_scrolls",
+        emoji: "📱",
+        title: { it: "Scroll sui social", en: "Social scrolls" },
         description: {
           it: "Feed aggiornati dagli utenti.",
-          en: "Feeds scrolled by users."
+          en: "Feeds scrolled by users.",
         },
         ratePerSecond: 4500000,
-        unit: { it: "scroll/sec", en: "scrolls/sec" }
+        unit: { it: "scroll/sec", en: "scrolls/sec" },
       },
       {
         id: "music_streams",
-        title: { it: "🎵 Ascolti musicali", en: "🎵 Music streams" },
+        emoji: "🎵",
+        title: { it: "Ascolti musicali", en: "Music streams" },
         description: {
-          it: "Brani musicati ascoltati online.",
-          en: "Music plays on streaming services."
+          it: "Brani ascoltati sui servizi di streaming.",
+          en: "Tracks played on streaming platforms.",
         },
         ratePerSecond: 800000,
-        unit: { it: "ascolti/sec", en: "plays/sec" }
+        unit: { it: "ascolti/sec", en: "plays/sec" },
       },
       {
         id: "videos_uploaded",
-        title: { it: "📹 Video caricati", en: "📹 Videos uploaded" },
+        emoji: "📹",
+        title: { it: "Video caricati", en: "Videos uploaded" },
         description: {
           it: "Secondi di video caricati online.",
-          en: "Seconds of video uploaded."
+          en: "Seconds of video uploaded online.",
         },
         ratePerSecond: 500,
-        unit: { it: "sec_video/sec", en: "sec_video/sec" }
+        unit: { it: "sec_video/sec", en: "sec_video/sec" },
       },
       {
         id: "ai_tokens",
-        title: { it: "🤖 Token AI generati", en: "🤖 AI tokens generated" },
+        emoji: "🤖",
+        title: { it: "Token AI generati", en: "AI tokens generated" },
         description: {
           it: "Testo creato da modelli di intelligenza artificiale.",
-          en: "Text generated by AI models."
+          en: "Text generated by AI models.",
         },
         ratePerSecond: 220000000,
-        unit: { it: "token/sec", en: "tokens/sec" }
+        unit: { it: "token/sec", en: "tokens/sec" },
       },
       {
         id: "downloads",
-        title: { it: "💾 Download globali", en: "💾 Global downloads" },
+        emoji: "💾",
+        title: { it: "Download globali", en: "Global downloads" },
         description: {
           it: "File scaricati in tutto il mondo.",
-          en: "Files downloaded worldwide."
+          en: "Files downloaded worldwide.",
         },
         ratePerSecond: 3200000,
-        unit: { it: "download/sec", en: "downloads/sec" }
+        unit: { it: "download/sec", en: "downloads/sec" },
       },
       {
         id: "search_queries",
-        title: { it: "🔍 Ricerche online", en: "🔍 Search queries" },
+        emoji: "🔍",
+        title: { it: "Ricerche online", en: "Search queries" },
         description: {
           it: "Ricerche effettuate dagli utenti.",
-          en: "Searches performed by users."
+          en: "Searches performed by users.",
         },
         ratePerSecond: 100000,
-        unit: { it: "ricerche/sec", en: "searches/sec" }
+        unit: { it: "ricerche/sec", en: "searches/sec" },
       },
       {
         id: "online_purchases",
-        title: { it: "🛒 Acquisti online", en: "🛒 Online purchases" },
+        emoji: "🛒",
+        title: { it: "Acquisti online", en: "Online purchases" },
         description: {
           it: "Prodotti acquistati su internet.",
-          en: "Products purchased online."
+          en: "Products purchased online.",
         },
         ratePerSecond: 100000,
-        unit: { it: "acquisti/sec", en: "purchases/sec" }
+        unit: { it: "acquisti/sec", en: "purchases/sec" },
       },
       {
         id: "photos_taken",
-        title: { it: "📸 Foto scattate", en: "📸 Photos taken" },
+        emoji: "📸",
+        title: { it: "Foto scattate", en: "Photos taken" },
         description: {
           it: "Foto scattate dagli smartphone.",
-          en: "Photos taken around the world."
+          en: "Photos taken around the world.",
         },
         ratePerSecond: 3000000,
-        unit: { it: "foto/sec", en: "photos/sec" }
-      }
-    ]
+        unit: { it: "foto/sec", en: "photos/sec" },
+      },
+    ],
   },
 
   // 🎮 GAMING FRENZY
   {
     id: "gaming_frenzy",
-    title: { it: "Frenesia Videoludica", en: "Gaming Frenzy", emoji: "🎮" },
-    graphStyle: "bouncing_particles",
+    emoji: "🎮",
+    title: {
+      it: "Frenesia Videoludica",
+      en: "Gaming Frenzy",
+    },
+    subtitle: {
+      it: "Numeri dal mondo dei videogiochi",
+      en: "Numbers from the gaming world",
+    },
+    info: {
+      source: "Newzoo / report industria gaming + stime utilizzo (stima)",
+      url: "https://newzoo.com/",
+      note_it:
+        "Valori indicativi/stimati da report di settore e modelli di utilizzo; non sono misure live dei singoli giochi.",
+      note_en:
+        "Indicative/estimated values from industry reports and usage models; not per-game live measurements.",
+    },
+    graphStyle: "data_rain",
     items: [
       {
         id: "controller_inputs",
-        title: { it: "🎮 Input da controller", en: "🎮 Controller inputs" },
+        emoji: "🎮",
+        title: { it: "Input da controller", en: "Controller inputs" },
         description: {
           it: "Pulsanti premuti nei videogiochi.",
-          en: "Buttons pressed in games."
+          en: "Buttons pressed in games.",
         },
         ratePerSecond: 500000000,
-        unit: { it: "input/sec", en: "inputs/sec" }
+        unit: { it: "input/sec", en: "inputs/sec" },
       },
       {
         id: "mouse_clicks",
-        title: { it: "🖱 Click nei videogiochi", en: "🖱 Mouse clicks in games" },
+        emoji: "🖱",
+        title: {
+          it: "Click nei videogiochi",
+          en: "Mouse clicks in games",
+        },
         description: {
           it: "Click effettuati dai giocatori.",
-          en: "Clicks made by players."
+          en: "Clicks made by players.",
         },
         ratePerSecond: 10000000000,
-        unit: { it: "click/sec", en: "clicks/sec" }
+        unit: { it: "click/sec", en: "clicks/sec" },
       },
       {
         id: "active_players",
-        title: { it: "👥 Videogiocatori attivi", en: "👥 Active gamers" },
+        emoji: "👥",
+        title: { it: "Videogiocatori attivi", en: "Active gamers" },
         description: {
           it: "Persone che stanno giocando ora.",
-          en: "People playing right now."
+          en: "People playing right now.",
         },
         ratePerSecond: 300000,
-        unit: { it: "giocatori/sec", en: "players/sec" }
+        unit: { it: "giocatori/sec", en: "players/sec" },
       },
       {
         id: "stream_hours",
-        title: { it: "🎧 Ore guardate in streaming", en: "🎧 Streaming hours watched" },
+        emoji: "🎧",
+        title: {
+          it: "Ore guardate in streaming",
+          en: "Streaming hours watched",
+        },
         description: {
           it: "Ore di Twitch/YouTube Gaming consumate.",
-          en: "Hours watched across streaming platforms."
+          en: "Hours watched across streaming platforms.",
         },
         ratePerSecond: 120000,
-        unit: { it: "ore/sec", en: "hours/sec" }
+        unit: { it: "ore/sec", en: "hours/sec" },
       },
       {
         id: "play_hours",
-        title: { it: "🕹 Ore di gioco accumulate", en: "🕹 Playtime accumulated" },
+        emoji: "🕹",
+        title: {
+          it: "Ore di gioco accumulate",
+          en: "Playtime accumulated",
+        },
         description: {
           it: "Ore giocate globalmente.",
-          en: "Total playtime generated."
+          en: "Total playtime generated.",
         },
         ratePerSecond: 1000000,
-        unit: { it: "ore/sec", en: "hours/sec" }
+        unit: { it: "ore/sec", en: "hours/sec" },
       },
       {
         id: "server_attacks",
-        title: { it: "⚙️ Server di gioco hackerati", en: "⚙️ Game servers attacked" },
+        emoji: "⚙️",
+        title: {
+          it: "Server di gioco attaccati",
+          en: "Game servers attacked",
+        },
         description: {
-          it: "Attacchi o intrusioni ai server online.",
-          en: "Online game server hack attempts."
+          it: "Tentativi di attacco ai server online.",
+          en: "Hack attempts against online game servers.",
         },
         ratePerSecond: 20,
-        unit: { it: "attacchi/sec", en: "attacks/sec" }
+        unit: { it: "attacchi/sec", en: "attacks/sec" },
       },
       {
         id: "games_produced",
-        title: { it: "📦 Videogiochi prodotti", en: "📦 Video games produced" },
+        emoji: "📦",
+        title: { it: "Videogiochi prodotti", en: "Video games produced" },
         description: {
           it: "Giochi creati dall'industria globale.",
-          en: "Games produced globally."
+          en: "Games produced globally.",
         },
         ratePerSecond: 4,
-        unit: { it: "giochi/sec", en: "games/sec" }
+        unit: { it: "giochi/sec", en: "games/sec" },
       },
       {
         id: "minecraft_blocks",
-        title: { it: "🧱 Blocchi piazzati in Minecraft", en: "🧱 Blocks placed in Minecraft" },
+        emoji: "🧱",
+        title: {
+          it: "Blocchi piazzati in Minecraft",
+          en: "Blocks placed in Minecraft",
+        },
         description: {
           it: "Blocchi piazzati dai giocatori.",
-          en: "Blocks placed by players."
+          en: "Blocks placed by players.",
         },
         ratePerSecond: 20000000,
-        unit: { it: "blocchi/sec", en: "blocks/sec" }
+        unit: { it: "blocchi/sec", en: "blocks/sec" },
       },
       {
         id: "esport_matches",
-        title: { it: "🏆 Partite eSport", en: "🏆 eSports matches" },
+        emoji: "🏆",
+        title: { it: "Partite eSport", en: "eSports matches" },
         description: {
           it: "Partite competitive giocate nel mondo.",
-          en: "Competitive matches played globally."
+          en: "Competitive matches played globally.",
         },
         ratePerSecond: 300,
-        unit: { it: "match/sec", en: "matches/sec" }
+        unit: { it: "match/sec", en: "matches/sec" },
       },
       {
-        id: "gaming_market",
-        title: { it: "💰 Valore del mercato videoludico", en: "💰 Gaming market value" },
+        id: "gaming_market_value",
+        emoji: "💰",
+        title: {
+          it: "Valore del mercato videoludico",
+          en: "Gaming market value",
+        },
         description: {
           it: "Valore generato dall'industria del gaming.",
-          en: "Value generated by the gaming market."
+          en: "Value generated by the gaming market.",
         },
         ratePerSecond: 1500000,
-        unit: { it: "USD/sec", en: "USD/sec" }
-      }
-    ]
-  }
+        unit: { it: "USD/sec", en: "USD/sec" },
+      },
+    ],
+  },
 ];
