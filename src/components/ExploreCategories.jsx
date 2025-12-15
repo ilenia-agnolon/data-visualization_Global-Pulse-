@@ -13,10 +13,9 @@ export function ExploreCategories() {
 
       <div className="cat-row">
 
-        {/* ------- CARD */}
+        {/* ------- CARD ------- */}
        <CategoryCard />
-
-         {/* ------- */}
+         {/* ------- x ------- */}
       </div>
 
     </div>
