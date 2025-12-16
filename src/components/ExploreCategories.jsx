@@ -10,7 +10,9 @@ import { useLanguage } from "../i18n/LanguageContext";
 //css
 import "./ExploreCategories.css"
 
-export function ExploreCategories() {
+
+
+export function ExploreCategories({ activeCategoryId, onCategoryChange }) {
 
     const { lang } = useLanguage();
 
@@ -23,20 +25,21 @@ export function ExploreCategories() {
           : "Select a category to filter the data"}</h4>
 
       <div className="cat-row">
-        {dataCategories.map((category) => (
-     
-       <CategoryCard 
+      {dataCategories.map((category) => {
+        const isActive = category.id === activeCategoryId;
+
+        return (
+          <CategoryCard
             key={category.id}
             icon={category.emoji}
             counter={category.items.length}
             title={category.title[lang]}
-            description={category.subtitle ? category.subtitle[lang] : ""}/>
-
-       )
-      )}
-
-        
-         
+            description={category.subtitle ? category.subtitle[lang] : ""}
+            isActive={isActive}
+            onClick={() => onCategoryChange(category.id)}
+          />
+        );
+      })}
       </div>
 
     </div>

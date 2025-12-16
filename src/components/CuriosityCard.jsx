@@ -1,9 +1,18 @@
 //css
 import "./CuriosityCard.css"
 
-export function CuriosityCard ({ item, lang }) {
+//compact number: 1.2K, 5.6M, 3.4B
+function formatCompactNumber(value, lang) {
+  const locale = lang === "it" ? "it-IT" : "en-US";
+  return new Intl.NumberFormat(locale, {
+    notation: "compact",
+    maximumFractionDigits: 2,
+  }).format(value);
+}
 
-   const {
+export function CuriosityCard ({ item, lang, secondsToday }) {
+
+  const {
     emoji,
     sectionEmoji,
     title,
@@ -13,8 +22,31 @@ export function CuriosityCard ({ item, lang }) {
   } = item;
 
   // numeric format
-  const locale = lang === "it" ? "it-IT" : "en-US";
-  const formattedRate = ratePerSecond.toLocaleString(locale);
+  // const locale = lang === "it" ? "it-IT" : "en-US";
+
+  //estimated total “today”
+  const totalToday = ratePerSecond * secondsToday;
+
+  const mainValueCompact = formatCompactNumber(totalToday, lang);
+
+  //split between number and letter (eg: "395.9Bln" → "395.9" + "Bln")
+  let numberPart = mainValueCompact;
+  let suffixPart = "";
+
+  const match = mainValueCompact.match(/^([\d.,]+)\s*([A-Za-z]+)?$/);
+  if (match) {
+    numberPart = match[1];         // eg. "274.2"
+    suffixPart = match[2] || "";   // eg. "T"
+  }
+
+  //unit for the total
+  const rawUnit = lang === "it" ? unit.it : unit.en;
+  const mainUnitLabel = rawUnit.includes("/sec")
+    ? rawUnit.replace("/sec", "")
+    : rawUnit;
+
+  //per-second increment (in compact format)
+  const rateCompact = formatCompactNumber(ratePerSecond, lang);
 
   return (
     <>
@@ -32,11 +64,18 @@ export function CuriosityCard ({ item, lang }) {
         </div>
 
           {/* DATA */}
-          <p className="cc-total"><span className="txt-orange">{formattedRate}</span>{" "}{unit[lang]}</p>
-          {/* RATE PER SECOND */}
+          <p className="cc-total">
+
+            {/* orange number */}
+            <span className="txt-orange cc-number">{numberPart}</span>
+            <span className="cc-unit">
+              {suffixPart && <span className="cc-total-suffix">{suffixPart}</span>}{" "}{mainUnitLabel}</span>
+            
+          </p>
+          {/* RATE PER SECOND  +XX/sec */}
           <p className="rate-per-second">{lang === "it"
-            ? "Incremento stimato al secondo"
-            : "Estimated increase per second"}</p>
+            ? `+${rateCompact} ${unit.it}`
+            : `+${rateCompact} ${unit.en}`}</p>
 
           {/* GRAPH PLACEHOLDER  */}
           <div className="graph"></div>

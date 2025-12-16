@@ -1,11 +1,15 @@
 //css
 import "./CategoryCard.css"
 
-export function CategoryCard({ icon, counter, title, description }) {
+export function CategoryCard({ icon, counter, title, description, isActive, onClick, }) {
   return (
     <>
      {/* ------- CARD */}
-        <div className="cat-card">
+        <div
+  className={`cat-card ${isActive ? "category-card--active" : ""}`}
+  onClick={onClick}
+  role="button"
+>
 
           <div className="icon-and-counter-box">
             {/* ICON */}

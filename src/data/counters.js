@@ -6,8 +6,8 @@ export const dataCategories = [
     id: "human_hyper_pulse",
     emoji: "🧬",
     title: {
-      it: "Pulsazione Umana",
-      en: "Human Hyper Pulse",
+      it: "Ritmi Umani",
+      en: "Human Rhythms",
     },
     subtitle: {
       it: "Ritmi e processi del corpo umano",
@@ -147,8 +147,8 @@ export const dataCategories = [
     id: "planet_flow",
     emoji: "🌍",
     title: {
-      it: "Flusso del Pianeta",
-      en: "Planet Turbo Flow",
+      it: "Dinamiche Planetarie",
+      en: "Planetary Dynamics",
     },
     subtitle: {
       it: "Fenomeni naturali e planetari",
@@ -297,8 +297,8 @@ export const dataCategories = [
     id: "cosmic_surge",
     emoji: "🌌",
     title: {
-      it: "Ondata Cosmica",
-      en: "Cosmic Surge",
+      it: "Fenomeni Cosmici",
+      en: "Cosmic Phenomena",
     },
     subtitle: {
       it: "Fenomeni astrofisici e particelle invisibili",
@@ -441,8 +441,8 @@ export const dataCategories = [
     id: "digital_firehose",
     emoji: "💻",
     title: {
-      it: "Getto Digitale",
-      en: "Digital Firehose",
+      it: "Flussi Digitali",
+      en: "Digital Flows",
     },
     subtitle: {
       it: "Flussi di dati e attività online",
@@ -576,8 +576,8 @@ export const dataCategories = [
     id: "gaming_frenzy",
     emoji: "🎮",
     title: {
-      it: "Frenesia Videoludica",
-      en: "Gaming Frenzy",
+      it: "Dati Videoludici",
+      en: "Gaming Data",
     },
     subtitle: {
       it: "Numeri dal mondo dei videogiochi",

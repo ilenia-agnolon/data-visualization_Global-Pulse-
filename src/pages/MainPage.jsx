@@ -22,10 +22,14 @@ export function MainPage() {
         <Hero />
 
         {/* CATEGORIES SECTION */}
-        <ExploreCategories/>
+        <ExploreCategories
+          activeCategoryId={activeCategoryId}
+          onCategoryChange={setActiveCategoryId}/>
 
         {/* CURIOSITIES SECTION */}
-        <CuriositiesSection/>
+        <CuriositiesSection
+        activeCategoryId={activeCategoryId}
+        onClearCategory={() => setActiveCategoryId(null)}/>
       </div>
     </div>
   );

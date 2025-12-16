@@ -1,7 +1,7 @@
 /* card */
 .curiosities-card-container{
     width: 364px;
-    height: 214px;
+    height: 248px;
     background-color: #16191F;
     border-radius: 8px;
     padding: 16px;
@@ -13,12 +13,8 @@
 .main-info{
     display: flex;
     column-gap: 28px;
-    height: 50px;
+    height: 76px;
 }
-
-/* icon */
-
-
 
 /* title */
 .cc-title{
@@ -35,10 +31,10 @@
 /* numbers */
 .cc-total{
     height: 50px;
-    padding-top: 8px;
     color:  #808797;
 }
 
+/* orange txt */
 .txt-orange{
     color: #F6A823;
     text-shadow: 0 0 2px rgba(246, 168, 35, 0.8), 0 0 10px rgba(246, 168, 35, 0.5);
@@ -46,6 +42,27 @@
     font-weight: 700;
 }
 
+.cc-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffb33e;
+  text-shadow: 0 0 8px rgba(255, 179, 62, 0.6);
+}
+
+.cc-unit {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffcc80;
+  opacity: 0.9;
+}
+
+.cc-total-suffix {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+
+/* RATE PER SECOND  +XX/sec */
 .rate-per-second{
     font-size: 0.8rem;
     padding-top: 6px;

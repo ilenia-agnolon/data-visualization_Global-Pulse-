@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 //components
 import { CuriosityCard } from "./CuriosityCard";
 
@@ -10,7 +12,7 @@ import { useLanguage } from "../i18n/LanguageContext";
 //css
 import "./CuriositiesSection.css"
 
-export function CuriositiesSection() {
+export function CuriositiesSection({ activeCategoryId, onClearCategory }) {
 
    const { lang } = useLanguage();
 
@@ -23,17 +25,63 @@ export function CuriositiesSection() {
     }))
   );
 
+  const activeCategory = dataCategories.find(
+    (cat) => cat.id === activeCategoryId
+  );
+
+  const itemsToShow = activeCategory
+    ? allItems.filter((item) => item.sectionId === activeCategoryId)
+    : allItems;
+
+  const title = activeCategory
+    ? activeCategory.title[lang]
+    : lang === "it"
+    ? "Tutte le curiosità"
+    : "All curiosities";
+
+  const subtitle = activeCategory
+    ? activeCategory.subtitle[lang]
+    : lang === "it"
+    ? `${allItems.length} curiosità in tempo reale`
+    : `${allItems.length} curiosities in real time`;
+
+  //seconds “spent today” (approximate)
+  const [secondsToday, setSecondsToday] = useState(() => {
+    const now = new Date();
+    return now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+  });
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setSecondsToday((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <div className="curiosities-container">
     
-          <h3>{lang === "it" ? "Tutte le curiosità" : "All curiosities"}</h3>
-          <h4>{lang === "it"
-          ? `${allItems.length} curiosità in tempo reale`
-          : `${allItems.length} curiosities in real time`}</h4>
+         <div className="curiosities-header">
+      <div>
+        <h3>{title}</h3>
+        <h4>{subtitle}</h4>
+      </div>
+
+      {activeCategory && (
+        <button
+          type="button"
+          className="show-all-button"
+          onClick={onClearCategory}
+        >
+          {lang === "it" ? "Mostra tutte" : "Show all"}
+        </button>
+      )}
+    </div>
     
           <div className="curiosities-row">
-            {allItems.map((item) => (
-              <CuriosityCard key={item.id} item={item} lang={lang} />
+            {itemsToShow.map((item) => (
+              <CuriosityCard key={item.id} item={item} lang={lang} secondsToday={secondsToday}/>
         ))}
       </div>
     
