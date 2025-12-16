@@ -4,7 +4,6 @@
     flex-direction: column;
     gap: 12px;
     cursor: pointer;
-    margin-top: 80px;
 }
 /**************************** language toggle ****************************/
 .hero-lang-toggle {
@@ -62,7 +61,7 @@
 
 /* txt "LIVE DATA" */
 .hero-live-label{
-    margin: 24px;
+    margin: 56px 0;
     font-weight: 200;
     font-size: 1rem;
     color: #d1d5db;
@@ -75,7 +74,6 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 28px;
   font-size: 12px;
   letter-spacing: 0.35em;
   text-transform: uppercase;  
@@ -112,4 +110,45 @@
 
 .hero-live-label {
   font-weight: 500;
+}
+
+/* ************************ SOURCES ************************ */
+.hero-data-notes {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.hero-data-notes-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.hero-data-notes-text {
+  font-size: 1rem;
+  color: #c2c9d7;
+  margin-bottom: 18px;
+}
+
+.hero-data-sources {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.hero-source-link {
+  color: #f9b44c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-source-link:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.hero-source-separator {
+  margin: 0 2px;
 }

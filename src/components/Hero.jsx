@@ -44,50 +44,59 @@ export function Hero() {
 
       {/************************ SOURCES ************************/}
       <section className="hero-data-notes">
-  <p className="hero-data-notes-title">
-    {lang === "it"
-      ? "Da dove arrivano questi numeri?"
-      : "Where do these numbers come from?"}
-  </p>
+        <p className="hero-data-notes-title">
+          {lang === "it"
+            ? "Da dove arrivano questi numeri?"
+            : "Where do these numbers come from?"}
+        </p>
 
-  <p className="hero-data-notes-text">
-    {lang === "it"
-      ? "I valori mostrati sono stime basate su medie e ordini di grandezza. Non sono dati live, ma proiezioni continue su fonti ufficiali."
-      : "The values shown are estimates based on averages and orders of magnitude. They are not live feeds, but continuously updated projections from official sources."}
-  </p>
+        <p className="hero-data-notes-text">
+          {lang === "it"
+            ? "I valori mostrati sono stime basate su medie e ordini di grandezza. Non sono dati live, ma proiezioni continue su fonti ufficiali."
+            : "The values shown are estimates based on averages and orders of magnitude. They are not live feeds, but continuously updated projections from official sources."}
+        </p>
 
-  <ul className="hero-data-notes-list">
-    <li>
-      <strong>OMS / WHO</strong> –{" "}
-      <a href="https://www.who.int/" target="_blank" rel="noreferrer">
-        who.int
-      </a>
-    </li>
-    <li>
-      <strong>NASA / Earth Observatory</strong> –{" "}
-      <a
-        href="https://earthobservatory.nasa.gov/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        earthobservatory.nasa.gov
-      </a>
-    </li>
-    <li>
-      <strong>ITU &amp; report Internet</strong> –{" "}
-      <a href="https://www.itu.int/" target="_blank" rel="noreferrer">
-        itu.int
-      </a>
-    </li>
-    <li>
-      <strong>Newzoo (gaming)</strong> –{" "}
-      <a href="https://newzoo.com/" target="_blank" rel="noreferrer">
-        newzoo.com
-      </a>
-    </li>
-  </ul>
+        <div className="hero-data-sources">
+          <a
+            href="https://www.who.int/"
+            target="_blank"
+            rel="noreferrer"
+            className="hero-source-link"
+          >
+            OMS / WHO
+          </a>
+          <span className="hero-source-separator">→</span>
+
+          <a
+            href="https://earthobservatory.nasa.gov/"
+            target="_blank"
+            rel="noreferrer"
+            className="hero-source-link"
+          >
+            NASA / Earth Observatory
+          </a>
+          <span className="hero-source-separator">→</span>
+
+          <a
+            href="https://www.itu.int/"
+            target="_blank"
+            rel="noreferrer"
+            className="hero-source-link"
+          >
+            ITU &amp; Report Internet
+          </a>
+          <span className="hero-source-separator">→</span>
+
+          <a
+            href="https://newzoo.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="hero-source-link"
+          >
+            Newzoo (Gaming)
+          </a>
+        </div>
 </section>
-
 
     </div>
   );
