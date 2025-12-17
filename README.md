@@ -1,32 +1,119 @@
 # Global Pulse
 
----
+## ![](screenshots/preview.png)
 
 ## 🇬🇧 Project Overview
 
-Global Pulse+ is an interactive dashboard inspired by real-time systems, designed to visualize large-scale processes that normally remain invisible. It represents human, planetary, cosmic, digital, and gaming-related phenomena through continuously increasing counters combined with smooth animations and a minimalist interface.
+### Observing the Rhythms of the World
 
-The project translates abstract, high-volume processes into an intuitive visual language. Each data stream is modeled as a counter that grows over time according to a defined rate per second, allowing users to perceive the relative magnitude and rhythm of global activity at any given moment.
+Global Pulse is a data-driven visual experience that shows the world as it happens.
 
-The interface is structured around thematic categories that group related phenomena, ensuring clarity and consistency even when displaying extremely large numbers. Compact numerical formatting is used to preserve readability across all scales.
+It does not tell the past and does not predict the future. It presents the present as a flow, made of continuous, distributed, and often invisible phenomena.
 
-Visual feedback is provided through animated particle effects that scale logarithmically with data intensity. This approach conveys variation and magnitude without overwhelming the user or the rendering pipeline.
+Each scrolling number represents a real process: biological, human, planetary, digital, or social. These processes are not shown as isolated events, but as rhythms.
 
-All displayed values are estimated and intended as order-of-magnitude references. They are derived from public scientific literature, institutional reports, and widely accepted global averages. When direct measurements are not available, proxy metrics are used to preserve an intuitive sense of scale while remaining explicit about limitations. Each data entry is associated with source references, explanatory notes, historical values for short-term trends, and contextual descriptions.
+### Time as a Reference
 
-Global Pulse is conceived as a data-driven narrative experience rather than a scientific instrument. Its purpose is to communicate scale, rhythm, and interconnectedness through a single coherent visual system.
+All counters are referenced to today.
+
+Calculations start at midnight of the current day and grow continuously throughout the day. Opening the project in the morning or later in the evening means observing different moments of the same global day.
+
+There is no saved state. Values are always recalculated from the current time in a coherent and deterministic way.
+
+As a result, every visit is different, contextual, and tied to the observer’s present time.
+
+### Types of Data Displayed
+
+The displayed values are not live feeds, but dynamic estimates.
+
+They are derived from annual, daily, or average data, official and recognized sources, and demographic, biological, physical, or industrial models.
+
+These values are converted into per-second rates and projected over time to make orders of magnitude visible that would otherwise remain abstract.
+
+The project does not aim for absolute precision at the single-second level. Its purpose is to communicate scale, intensity, and rhythm.
+
+### Philosophy and Transparency
+
+Global Pulse does not aim to impress with large numbers. It aims to make them perceptible.
+
+Smaller phenomena remain readable, while extremely large phenomena are visually compressed without being flattened. Millions, billions, and trillions are not treated in the same way.
+
+Every visual choice is driven by the meaning of the data.
+
+The project is explicit about its limits. It is not a scientific instrument, not an official counter, and not a prediction. It is a data-based narrative built with rigor and sensitivity.
+
+### Visualization as a Language
+
+The visuals do not display lines, but presences.
+
+Points appear and disappear like impulses. They do not represent objects, but events in motion.
+
+The visual rhythm adapts to the nature of each phenomenon: continuous for biological processes, dense and pulsating for digital activity, slow but persistent for planetary dynamics.
+
+Visualization does not overwhelm. It accompanies.
+
+### Why This Project Exists
+
+We live surrounded by numbers, but we rarely perceive their scale.
+
+Global Pulse exists to make the invisible visible, give rhythm to data, and transform quantity into perception.
+
+It is not a project meant to provide more information. It is a project meant to help feel the world as it happens.
 
 ## 🇮🇹 Descrizione del Progetto
 
-Global Pulse+ è una dashboard interattiva ispirata ai sistemi real-time, progettata per visualizzare processi su larga scala che normalmente rimangono invisibili. Rappresenta fenomeni umani, planetari, cosmici, digitali e legati al mondo del gaming tramite contatori in crescita continua, animazioni fluide e un’interfaccia minimale.
+### Osservare i ritmi del mondo
 
-Il progetto trasforma processi astratti e ad alto volume in un linguaggio visivo intuitivo. Ogni flusso di dati è modellato come un contatore che aumenta nel tempo secondo una velocità definita al secondo, consentendo di percepire la grandezza relativa e il ritmo dell’attività globale in ogni momento.
+Global Pulse è un’esperienza visiva basata sui dati che mostra il mondo mentre accade.
 
-L’interfaccia è organizzata in categorie tematiche che raggruppano fenomeni affini, mantenendo chiarezza e coerenza anche in presenza di numeri estremamente elevati. La formattazione compatta dei valori garantisce la leggibilità su tutte le scale.
+Non racconta il passato e non prevede il futuro. Mostra il presente come un flusso, fatto di fenomeni continui, distribuiti e spesso invisibili.
 
-Il feedback visivo è affidato a effetti particellari animati la cui densità cresce in modo logaritmico rispetto all’intensità dei dati. Questa scelta permette di comunicare variazioni e ordini di grandezza senza sovraccaricare l’utente o il sistema di rendering.
+Ogni numero che scorre rappresenta un processo reale: biologico, umano, planetario, digitale o sociale. Non come evento isolato, ma come ritmo.
 
-Tutti i valori mostrati sono stime e hanno lo scopo di fornire riferimenti di ordine di grandezza. Sono basati su letteratura scientifica, report istituzionali e medie globali comunemente accettate. Nei casi in cui non esistano misurazioni dirette, vengono utilizzate metriche proxy per mantenere un’idea intuitiva della scala, dichiarando esplicitamente i limiti. Ogni voce include riferimenti alle fonti, note esplicative, valori storici a breve termine e descrizioni contestuali.
+### Il tempo come riferimento
 
-Global Pulse non è concepito come uno strumento scientifico in tempo reale, ma come un’esperienza narrativa basata sui dati. L’obiettivo è comunicare scala, ritmo e interconnessione attraverso un’unica interfaccia visiva coerente.
+Tutti i conteggi sono riferiti a oggi.
 
+Il calcolo parte dalla mezzanotte del giorno corrente e cresce in modo continuo durante la giornata. Aprire il progetto al mattino o alla sera significa osservare momenti diversi della stessa giornata globale.
+
+Non esiste uno stato salvato. I valori vengono sempre ricalcolati a partire dall’orario attuale in modo coerente e deterministico.
+
+Di conseguenza, ogni visita è diversa, contestuale e legata al tempo reale dell’osservatore.
+
+### Che tipo di dati vengono mostrati
+
+I valori visualizzati non sono feed live, ma stime dinamiche.
+
+Sono ottenuti partendo da dati annuali, giornalieri o medi, fonti ufficiali e riconosciute, e modelli demografici, biologici, fisici o industriali.
+
+Questi dati vengono convertiti in tassi per secondo e proiettati nel tempo per rendere visibili ordini di grandezza che normalmente restano astratti.
+
+Il progetto non pretende precisione assoluta al singolo secondo. Il suo obiettivo è comunicare scala, intensità e ritmo.
+
+### Filosofia e trasparenza
+
+Global Pulse non cerca di impressionare con numeri enormi. Cerca di renderli percepibili.
+
+I fenomeni piccoli restano leggibili, mentre quelli estremamente grandi vengono compressi visivamente senza essere appiattiti. Milioni, miliardi e trilioni non vengono trattati allo stesso modo.
+
+Ogni scelta visiva è subordinata al significato del dato.
+
+Il progetto è esplicito sui suoi limiti. Non è uno strumento scientifico, non è un contatore ufficiale e non è una previsione. È una narrazione basata sui dati, costruita con rigore e sensibilità.
+
+### La visualizzazione come linguaggio
+
+Le visualizzazioni non mostrano linee, ma presenze.
+
+Punti che appaiono e scompaiono come impulsi. Non rappresentano oggetti, ma eventi in movimento.
+
+Il ritmo visivo si adatta alla natura di ciascun fenomeno: continuo per il biologico, denso e pulsante per il digitale, lento ma persistente per il planetario.
+
+La visualizzazione non invade. Accompagna.
+
+### Perché questo progetto
+
+Viviamo immersi nei numeri, ma raramente ne percepiamo la scala.
+
+Global Pulse nasce per rendere visibile l’invisibile, dare un ritmo al dato e trasformare la quantità in percezione.
+
+Non è un progetto per sapere di più. È un progetto per sentire meglio il mondo mentre accade.
